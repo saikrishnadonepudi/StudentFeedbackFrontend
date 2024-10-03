@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Feedback Management System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            height: 100%;
+        }
+        .signup-section {
+            flex: 1;
+            background-color: #a8d8e0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-section {
+            flex: 1;
+            background-color: #1d0c48;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .signup-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ff9800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+        h2 {
+            margin-top: 0;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="name"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #3367d6;
+        }
+        .back-link {
+            margin-top: 15px;
+            text-decoration: none;
+            color: #4285f4;
+        }
+        .image-section img {
+            max-width: 90%; /* Makes sure the image is responsive */
+            max-height: 90%; /* Ensures the image doesn't exceed the container */
+            border-radius: 10px; /* Optional: to match the style */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-section">
+            <div class="signup-box">
+                <div class="logo">
+                    <div class="logo-icon">🎓</div>
+                    <h1>Feedback Management System</h1>
+                </div>
+                <h2>Welcome...</h2>
+                <form id="signupForm">
+                    <input type="name" id="name" name="name" placeholder="Enter Username" required>
+                    <input type="email" id="email" name="email" placeholder="Enter Email Id" required>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    <button type="submit" class="btn">Signup</button>
+                </form>
+                <a href="login.html" class="back-link">Back to Login</a> <!-- Link to the login page -->
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="image.png" alt="Illustration" /> <!-- Replace with your actual image URL -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Sign up successful! Please check your email to verify your account.');
+        });
+    </script>
+</body>
+</html>
